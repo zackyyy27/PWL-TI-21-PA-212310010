@@ -17,14 +17,14 @@
 
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-// import BaseRoute from "./apps/BaseRoute";
 import LayoutInit from "./components/Messenger/LayoutInit";
+import BaseRoute from "./components/apps/BaseRoute";
 
-function App({ basename }) {
+function App() {
   return (
-    <div>
-      <LayoutInit />
-    </div>
+    <BrowserRouter>
+        <BaseRoute/>
+    </BrowserRouter>
   );
 }
 

@@ -16,10 +16,10 @@ export default function Headers() {
         <div>
         <ul className="nav nav-pills ms-auto">
             <li className="nav-item">
-              <a href="#" className="nav-link text-light">HOME</a>
+              <a className="nav-link text-light">HOME</a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link text-light">PWL</a>
+              <a className="nav-link text-light">PWL</a>
             </li>
           </ul>
         </div>

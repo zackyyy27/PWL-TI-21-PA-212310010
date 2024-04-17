@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import MessegerUi from "../chapter-1/widgets/MessegersUi";
+
 
 export default class ChapterOne extends Component {
   render() {
@@ -15,6 +17,7 @@ export default class ChapterOne extends Component {
     return (
       <div style={backgroundStyle}>
         <h3>Chapter One: The Beginning</h3>
+        <MessegerUi />
       </div>
     );
   }
