@@ -4,5 +4,5 @@ const userController = require("../controllers/UsersControllers");
 
 router.get("/", userController.index);
 router.post("/create", userController.createData);
-router.post("/fetch-all", userController.createData);
+router.get("/fetch-all", userController.GetAll);
 module.exports = router;

@@ -20,7 +20,7 @@ const handleClose = () => {
   });
 };
 
-const ModalPopUp = () => {
+function ModalPopUpUI() {
   const [data, setData] = useState({
     open: false,
     header: "ini header default",
@@ -45,12 +45,21 @@ const ModalPopUp = () => {
           </button>
           {data.footer}
         </Modal.Footer>
-      ) : null}
+      ) : (
+        ""
+      )}
     </Modal>
   );
-};
+}
 
-const openModal = ({ open = true, message, header, size, footer, onClose = () => {} }) => {
+const openModal = ({
+  open = true,
+  message,
+  header,
+  size,
+  footer,
+  onClose = () => {},
+}) => {
   states.changeState({
     message,
     header,
@@ -64,5 +73,5 @@ const openModal = ({ open = true, message, header, size, footer, onClose = () =>
   });
 };
 
-export default ModalPopUp;
+export default ModalPopUpUI;
 export { openModal };

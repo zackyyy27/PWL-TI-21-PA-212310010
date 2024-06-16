@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ContactUI } from "./widgets/contacts";
-import { Messegers, MyFriend } from "./widgets/constantas/DataChat";
-import MessengersUI from "../chapter-1/widgets/MessegersUi";
+import { Messegers, myFriends } from "./widgets/constantas/DataChat";
+import MessagersUi from "./widgets/messagers/messagersUi";
 import axios from "axios";
 
 export function ChapterThree() {
@@ -62,7 +62,7 @@ export function ChapterThree() {
     return (
         <div id="chapter-2">
             <h1 className="text-white bg-primary rounded-2 p-3 mb-5">
-                Chapter two: The Authentications and Messegers
+                Chapter three: The Authentications and Messegers
             </h1>
             <div className="px-3">
                 <div className="row">
@@ -83,7 +83,7 @@ export function ChapterThree() {
                     <div className="col-10 col-lg-9 col-xxl-8 px-0">
                         {/* (Messeging disini) */}
                         {myprofile ? (
-                            <MessengersUI
+                            <MessagersUi
                                 profile={myprofile}
                                 selectedUser={selectedUser}
                                 selectedChat={selectedChat}

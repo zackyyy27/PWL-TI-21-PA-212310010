@@ -22,9 +22,9 @@ exports.createData = async (req, res) => {
     }
 };
 
-exports.GetAll = async (req,res) => {
+exports.GetAll = async (req, res) => {
     try {
-        const results = await messagers.findAll();
+        const results = await Users.findAll();
         res.json({
             status:200,
             data: results,

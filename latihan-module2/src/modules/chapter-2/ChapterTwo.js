@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { ContactUI } from "./widgets/contacts";
 import { Messegers, MyFriend } from "./widgets/constantas/DataChat";
-import MessengersUI from "../chapter-1/widgets/MessegersUi";
+import MessengersUI from "./widgets/messagers/messagersUi";
+
 
 
 export function ChapterTwo() {
@@ -42,7 +43,6 @@ export function ChapterTwo() {
                         {/* (Messeging disini) */}
                         {myprofile ? (
                             <MessengersUI
-                            
                                 profile={myprofile}
                                 selectedUser={selectedUser}
                                 selectedChat={selectedChat}

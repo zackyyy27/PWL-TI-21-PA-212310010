@@ -16,7 +16,8 @@ const Chat_1 = [
     ]
     const Messegers = [{ chat_id: 1, user_id: "123", messages: Chat_1 },
     { chat_id: 2, user_id: "321", messages: Chat_2 }];
-    const MyFriend = [
+
+    const myFriends = [
     { id: 3, user_id: "123", name: "Septian" },
     { id: 1, user_id: "321", name: "Jemi" },
     { id: 2, user_id: "456", name: "Edi" },
@@ -25,4 +26,4 @@ const Chat_1 = [
     { id: 6, user_id: "585", name: "Anton" },
     ]
 
-    export { Messegers, MyFriend };
+    export { Messegers, myFriends };

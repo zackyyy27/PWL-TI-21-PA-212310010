@@ -1,5 +1,5 @@
 {
-  "name": "latihan-module2",
+  "name": "todo-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,18 +9,15 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "moment": "^2.30.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.10.1",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
+    "react": "^18.3.1",
+    "react-bootstrap-icons": "^1.11.4",
+    "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "sentiment": "^5.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3004 && react-scripts start",
-    "build": "set PORT=3004 && react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

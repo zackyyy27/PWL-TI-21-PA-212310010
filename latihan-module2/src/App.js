@@ -19,6 +19,8 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import LayoutInit from "./components/Messenger/LayoutInit";
 import BaseRoute from "./components/apps/BaseRoute";
+import Sentiment from 'sentiment';
+
 
 function App() {
   // const createSessionStorage = () => {
@@ -37,7 +39,15 @@ function App() {
   //   localStorage.removeItem('tokenLocal', '54321')
   //   alert('Success remove token to local storage')
   // }
-    
+  // const sentiment = new Sentiment();
+  // const teks = "DANILSON";
+  // const hasilAnalisis = sentiment.analyze(teks);
+
+  // console.log("Teks:", teks);
+  // console.log("Skor:", hasilAnalisis.score);
+  // console.log("Klasifikasi:", hasilAnalisis.score > 0 ? "Positif" :
+  // hasilAnalisis.score < 0 ? "Negatif" : "Netral");
+  
  return (
   //     <>
   //     <h1>session storage</h1>
@@ -50,8 +60,11 @@ function App() {
   //     <button onClick={removeLocalStorage}>remove token localStorage</button>
   //   </>
     <BrowserRouter>
+      <LayoutInit>
         <BaseRoute/>
+        </LayoutInit>
     </BrowserRouter>
+
   );
 }
 
