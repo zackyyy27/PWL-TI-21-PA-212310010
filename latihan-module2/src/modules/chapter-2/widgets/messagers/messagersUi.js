@@ -16,9 +16,8 @@ const MessengersUI = ({ profile, selectedChat }) => {
     });
   };
 
-  // Filter kata-kata kasar
   const filterBadWords = (message) => {
-    const badWords = ['fuck']; // Daftar kata kasar yang ingin diganti
+    const badWords = ['fuck']; 
     let filteredMessage = message;
 
     badWords.forEach(word => {
@@ -56,7 +55,7 @@ const MessengersUI = ({ profile, selectedChat }) => {
     let computedData = []; 
     if (myChat.length > 0) { 
       computedData = myChat.map((msg) => { 
-        const filteredMessage = filterBadWords(msg.messages); // Filter kata-kata kasar dalam pesan
+        const filteredMessage = filterBadWords(msg.messages); 
         const result = sentiment.analyze(filteredMessage); 
         let sentimentLabel = 'Netral'; 
         if (result.score > 0) sentimentLabel = 'Positif'; 
@@ -64,7 +63,7 @@ const MessengersUI = ({ profile, selectedChat }) => {
  
         return { 
           ...msg, 
-          messages: filteredMessage, // Setelah difilter
+          messages: filteredMessage,
           sentiment: sentimentLabel, 
           date: msg.createdAt,
           date_fmt: moment(msg.createdAt).format("YYYY-MM-DD"), 
@@ -88,14 +87,12 @@ const MessengersUI = ({ profile, selectedChat }) => {
     let speechText = "";
 
     if (resultMessageData.length > 0) {
-      let currentSender = ""; // Variabel untuk menyimpan sender saat ini
+      let currentSender = ""; 
 
       resultMessageData.forEach(msg => {
         if (msg.isOutgoing) {
-          // Jika pengirim adalah user saat ini (profile.id), tulis "Pesan dari saya"
           speechText += `Pesan dari saya: ${msg.messages}. `;
         } else {
-          // Jika pengirim bukan user saat ini, tulis "Pesan dari [Nama Pengirim]"
           if (msg.from_id !== currentSender) {
             currentSender = msg.from_id;
             speechText += `Pesan dari ${msg.from_id}: ${msg.messages}. `;
@@ -104,8 +101,6 @@ const MessengersUI = ({ profile, selectedChat }) => {
           }
         }
       });
-
-      // Example using Audio HTML5 for text-to-speech (replace with your preferred TTS implementation)
       const speechSynthesis = window.speechSynthesis;
       const utterance = new SpeechSynthesisUtterance(speechText);
       speechSynthesis.speak(utterance);
